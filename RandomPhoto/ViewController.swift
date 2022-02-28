@@ -36,14 +36,16 @@ class ViewController: UIViewController {
         .systemIndigo,
         .systemPurple,
         .systemOrange,
-        .systemYellow
+        .systemYellow,
+        .systemBrown,
+        .systemGray3
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
         view.addSubview(imageView)
-        imageView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        imageView.frame = CGRect(x: 0, y: 0, width: 360, height: 360)
         imageView.center = view.center
         view.addSubview(button)
         getRandomPhoto()
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     func getRandomPhoto() {
-        let urlString = "https://source.unsplash.com/random/600x600"
+        let urlString = "https://source.unsplash.com/random/630x630"
         let url = URL(string: urlString)! //! means that url exists
         guard let data = try? Data(contentsOf: url) else {
             return
